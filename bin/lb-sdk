@@ -149,9 +149,9 @@ function runGenerator(context) {
   //
   // The exit is deferred to the next tick in order to prevent the Node bug:
   // https://github.com/joyent/node/issues/3584
-  process.nextTick(function () {
-    process.exit();
-  });
+  // process.nextTick(function () {
+  //   process.exit();
+  // });
 }
 //--- helpers ---//
 function assertLoopBackVersion() {
