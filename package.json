@@ -1,6 +1,6 @@
 {
   "name": "perfectedtech-loopback-sdk-builder",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "Tool for auto-generating Software Development Kits (SDKs) for LoopBack",
   "bin": {
     "lb-sdk": "bin/lb-sdk"
