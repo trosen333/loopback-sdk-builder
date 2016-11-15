@@ -19,6 +19,52 @@ var through = require('through2');
 /**
  * CLI Options Description
  */
+var argv = optimist
+  .usage('\n******************************************* LoopBack SDK Builder 2.0 *******************************************\n' +
+  '\nGenerate Client SDK for your LoopBack Application.' +
+  '\nUsage:' +
+  '\n ./node_modules/.bin/lb-sdk server/server app/shared/sdk -d [ng4web | nativescript2] -i [enabled | disabled]')
+  .describe('l', 'Client\'s library (angular2, react <todo>, ...)')
+  .describe('d', 'Platform specific drivers (ng4web, nativescript2, ng2universal <todo>)')
+  .describe('i', 'Enable PubSub, IO and FireLoop functionality')
+  .describe('w', 'Automatically wipe SDK Directory')
+  .default('l', 'angular2')
+  .default('d', 'ng4web')
+  .default('i', 'enabled')
+  .default('w', 'disabled')
+  .alias({ u: 'url', m: 'module-name', l: 'library', i: 'io', d: 'driver', w: 'wipe' })
+  .demand(1)
+  .argv;
+/**
+ * Splash ACII Art
+ */
+console.log(chalk.green('\n\n=========================================================================================='));
+console.log(chalk.green('*    __                  ___           __     _______  __ __  ___       _ __   __        *'));
+console.log(chalk.green('*   / /  ___  ___  ___  / _ )___ _____/ /__  / __/ _ \\/ //_/ / _ )__ __(_) /__/ /__ ____ *'));
+console.log(chalk.green('*  / /__/ _ \\/ _ \\/ _ \\/ _  / _ `/ __/  \'_/ _\\ \\/ // / ,<   / _  / // / / / _  / -_) __/ *'));
+console.log(chalk.green('* /____/\\___/\\___/ .__/____/\\_,_/\\__/_/\\_\\ /___/____/_/|_| /____/\\_,_/_/_/\\_,_/\\__/_/V2  *'));
+console.log(chalk.green('*                 /_/                                                                    *'));
+console.log(chalk.green('*                                                                                        *'));
+console.log(chalk.green('*========================================================================================*'));
+console.log(chalk.green('*                                                                                        *'));
+console.log(chalk.green('*                       Developed & Maintained by Jonathan Casarrubias                   *'));
+console.log(chalk.green('*       MEAN Expert · http://mean.expert · http://github.com/mean-expert-official        *'));
+console.log(chalk.green('*                                                                                        *'));
+console.log(chalk.green('*                                      CONTRIBUTORS                                      *'));
+console.log(chalk.green('*                         João Ribeiro <http://jonnybgod.ghost.io>                       *'));
+console.log(chalk.green('*                      Nikolay Matiushenkov <https://github.com/mnvx>                    *'));
+console.log(chalk.green('*                         Sylvain Dumont <https://www.weboaks.com>                       *'));
+console.log(chalk.green('*                        Yonggang Luo <https://github.com/lygstate>                      *'));
+console.log(chalk.green('*                       Chris Tunbridge <https://github.com/Destreyf>                    *'));
+console.log(chalk.green('*                       Miguel Serrano <https://github.com/Serranom4>                    *'));
+console.log(chalk.green('*                                                                                        *'));
+console.log(chalk.green('*                                 ORIGINALLY FORKED FROM                                 *'));
+console.log(chalk.green('*                      Miroslav Bajtos\' <miroslav@strongloop.com>                        *'));
+console.log(chalk.green('*                   https://github.com/strongloop/loopback-sdk-angular                   *'));
+console.log(chalk.green('*                                                                                        *'));
+console.log(chalk.green('=========================================================================================='));
+
+console.log('\n\THE MAGIC IS ABOUT TO HAPPEN ...\n\n');
 
 module.exports = function (options) {
 

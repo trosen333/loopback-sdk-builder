@@ -50,18 +50,18 @@ export class CoreApi extends BaseLoopBackApi {
    * This usually means the response is a `Core` object.)
    * </em>
    */
-  public run(path: any = undefined, body: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public run(path: any = {}, body: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/cores/run/:path";
-    let routeParams: any = {
+    let _routeParams: any = {
       path: path
     };
-    let postBody: any = {
+    let _postBody: any = {
       body: body
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -80,16 +80,16 @@ export class CoreApi extends BaseLoopBackApi {
    *
    * This method returns no data.
    */
-  public invoke(request: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public invoke(request: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/cores/invoke";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       request: request
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 

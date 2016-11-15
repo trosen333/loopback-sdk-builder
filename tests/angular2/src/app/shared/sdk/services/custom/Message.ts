@@ -47,17 +47,17 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public getRoom(id: any, refresh: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public getRoom(id: any, refresh: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/room";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (refresh) urlParams.refresh = refresh;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (refresh) _urlParams.refresh = refresh;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -78,16 +78,16 @@ export class MessageApi extends BaseLoopBackApi {
    * </em>
    */
   public findByIdReplies(id: any, fk: any): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -105,16 +105,16 @@ export class MessageApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public destroyByIdReplies(id: any, fk: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -138,19 +138,19 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public updateByIdReplies(id: any, fk: any, data: any = undefined): Observable<any> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateByIdReplies(id: any, fk: any, data: any = {}): Observable<any> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -170,17 +170,17 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public getParent(id: any, refresh: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public getParent(id: any, refresh: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/parent";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (refresh) urlParams.refresh = refresh;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (refresh) _urlParams.refresh = refresh;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -201,16 +201,16 @@ export class MessageApi extends BaseLoopBackApi {
    * </em>
    */
   public findByIdLikes(id: any, fk: any): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -228,16 +228,16 @@ export class MessageApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public destroyByIdLikes(id: any, fk: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -261,19 +261,19 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public updateByIdLikes(id: any, fk: any, data: any = undefined): Observable<any> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateByIdLikes(id: any, fk: any, data: any = {}): Observable<any> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -293,17 +293,17 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public getReplies(id: any, filter: LoopBackFilter = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public getReplies(id: any, filter: LoopBackFilter = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -325,18 +325,18 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public createReplies(id: any, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createReplies(id: any, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -352,15 +352,15 @@ export class MessageApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public deleteReplies(id: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -379,17 +379,17 @@ export class MessageApi extends BaseLoopBackApi {
    *
    *  - `count` – `{number}` - 
    */
-  public countReplies(id: any, where: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public countReplies(id: any, where: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies/count";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -409,17 +409,17 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public getLikes(id: any, filter: LoopBackFilter = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public getLikes(id: any, filter: LoopBackFilter = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -441,18 +441,18 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public createLikes(id: any, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createLikes(id: any, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -468,15 +468,15 @@ export class MessageApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public deleteLikes(id: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -495,17 +495,17 @@ export class MessageApi extends BaseLoopBackApi {
    *
    *  - `count` – `{number}` - 
    */
-  public countLikes(id: any, where: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public countLikes(id: any, where: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes/count";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -525,16 +525,16 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public create(data: any = undefined): Observable<Message> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public create(data: any = {}): Observable<Message> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Message) => new Message(instance));
   }
 
@@ -554,16 +554,16 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public upsert(data: any = undefined): Observable<Message> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public upsert(data: any = {}): Observable<Message> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Message) => new Message(instance));
   }
 
@@ -583,16 +583,16 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public replaceOrCreate(data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public replaceOrCreate(data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/replaceOrCreate";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -614,17 +614,17 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public upsertWithWhere(where: any = undefined, data: any = undefined): Observable<Message> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public upsertWithWhere(where: any = {}, data: any = {}): Observable<Message> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/upsertWithWhere";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Message) => new Message(instance));
   }
 
@@ -642,15 +642,15 @@ export class MessageApi extends BaseLoopBackApi {
    *  - `exists` – `{boolean}` - 
    */
   public exists(id: any): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/exists";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -670,17 +670,17 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public findById(id: any, filter: LoopBackFilter = undefined): Observable<Message> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public findById(id: any, filter: LoopBackFilter = {}): Observable<Message> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Message) => new Message(instance));
   }
 
@@ -702,18 +702,18 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public replaceById(id: any, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public replaceById(id: any, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replace";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -731,15 +731,15 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public find(filter: LoopBackFilter = undefined): Observable<Array<Message>> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public find(filter: LoopBackFilter = {}): Observable<Array<Message>> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages";
-    let routeParams: any = {};
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _routeParams: any = {};
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instances: Array<Message>) =>
         instances.map((instance: Message) => new Message(instance))
     );
@@ -759,15 +759,15 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public findOne(filter: LoopBackFilter = undefined): Observable<Message> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public findOne(filter: LoopBackFilter = {}): Observable<Message> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/findOne";
-    let routeParams: any = {};
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _routeParams: any = {};
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Message) => new Message(instance));
   }
 
@@ -786,17 +786,17 @@ export class MessageApi extends BaseLoopBackApi {
    *
    * The number of instances updated
    */
-  public updateAll(where: any = undefined, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateAll(where: any = {}, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/update";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -815,15 +815,15 @@ export class MessageApi extends BaseLoopBackApi {
    * </em>
    */
   public deleteById(id: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -840,15 +840,15 @@ export class MessageApi extends BaseLoopBackApi {
    *
    *  - `count` – `{number}` - 
    */
-  public count(where: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public count(where: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/count";
-    let routeParams: any = {};
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _routeParams: any = {};
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -870,18 +870,18 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public updateAttributes(id: any, data: any = undefined): Observable<any> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateAttributes(id: any, data: any = {}): Observable<any> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -901,12 +901,12 @@ export class MessageApi extends BaseLoopBackApi {
    *  - `changes` – `{ReadableStream}` - 
    */
   public createChangeStream(): Observable<any> {
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/change-stream";
     let subject = new Subject();
     if (typeof EventSource !== 'undefined') {
       let emit   = (msg: any) => subject.next(JSON.parse(msg.data));
-      var source = new EventSource(url);
+      var source = new EventSource(_url);
       source.addEventListener('data', emit);
       source.onerror = emit;
     } else {
@@ -932,18 +932,18 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public createManyReplies(id: any, data: Array<any> = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createManyReplies(id: any, data: Array<any> = []): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/replies";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -965,18 +965,18 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public createManyLikes(id: any, data: Array<any> = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createManyLikes(id: any, data: Array<any> = []): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages/:id/likes";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -996,16 +996,16 @@ export class MessageApi extends BaseLoopBackApi {
    * This usually means the response is a `Message` object.)
    * </em>
    */
-  public createMany(data: Array<any> = undefined): Observable<Array<Message>> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createMany(data: Array<any> = []): Observable<Array<Message>> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/messages";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instances: Array<Message>) =>
         instances.map((instance: Message) => new Message(instance))
     );

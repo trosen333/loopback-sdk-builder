@@ -48,16 +48,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * </em>
    */
   public findByIdRooms(id: any, fk: any): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -75,16 +75,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public destroyByIdRooms(id: any, fk: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -108,19 +108,19 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public updateByIdRooms(id: any, fk: any, data: any = undefined): Observable<any> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateByIdRooms(id: any, fk: any, data: any = {}): Observable<any> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -144,19 +144,19 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public linkRooms(id: any, fk: any, data: any = undefined): Observable<any> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public linkRooms(id: any, fk: any, data: any = {}): Observable<any> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/rel/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -174,16 +174,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public unlinkRooms(id: any, fk: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/rel/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -204,16 +204,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * </em>
    */
   public existsRooms(id: any, fk: any): Observable<any> {
-    let method: string = "HEAD";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "HEAD";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/rel/:fk";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id,
       fk: fk
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -233,17 +233,17 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public getRooms(id: any, filter: LoopBackFilter = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public getRooms(id: any, filter: LoopBackFilter = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -265,18 +265,18 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public createRooms(id: any, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createRooms(id: any, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -292,15 +292,15 @@ export class CategoryApi extends BaseLoopBackApi {
    * This method returns no data.
    */
   public deleteRooms(id: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -319,17 +319,17 @@ export class CategoryApi extends BaseLoopBackApi {
    *
    *  - `count` – `{number}` - 
    */
-  public countRooms(id: any, where: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public countRooms(id: any, where: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms/count";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -349,16 +349,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public create(data: any = undefined): Observable<Category> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public create(data: any = {}): Observable<Category> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Category) => new Category(instance));
   }
 
@@ -378,16 +378,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public upsert(data: any = undefined): Observable<Category> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public upsert(data: any = {}): Observable<Category> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Category) => new Category(instance));
   }
 
@@ -407,16 +407,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public replaceOrCreate(data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public replaceOrCreate(data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/replaceOrCreate";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -438,17 +438,17 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public upsertWithWhere(where: any = undefined, data: any = undefined): Observable<Category> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public upsertWithWhere(where: any = {}, data: any = {}): Observable<Category> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/upsertWithWhere";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Category) => new Category(instance));
   }
 
@@ -466,15 +466,15 @@ export class CategoryApi extends BaseLoopBackApi {
    *  - `exists` – `{boolean}` - 
    */
   public exists(id: any): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/exists";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -494,17 +494,17 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public findById(id: any, filter: LoopBackFilter = undefined): Observable<Category> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public findById(id: any, filter: LoopBackFilter = {}): Observable<Category> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Category) => new Category(instance));
   }
 
@@ -526,18 +526,18 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public replaceById(id: any, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public replaceById(id: any, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/replace";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -555,15 +555,15 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public find(filter: LoopBackFilter = undefined): Observable<Array<Category>> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public find(filter: LoopBackFilter = {}): Observable<Array<Category>> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories";
-    let routeParams: any = {};
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _routeParams: any = {};
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instances: Array<Category>) =>
         instances.map((instance: Category) => new Category(instance))
     );
@@ -583,15 +583,15 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public findOne(filter: LoopBackFilter = undefined): Observable<Category> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public findOne(filter: LoopBackFilter = {}): Observable<Category> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/findOne";
-    let routeParams: any = {};
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (filter) urlParams.filter = filter;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _routeParams: any = {};
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (filter) _urlParams.filter = filter;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instance: Category) => new Category(instance));
   }
 
@@ -610,17 +610,17 @@ export class CategoryApi extends BaseLoopBackApi {
    *
    * The number of instances updated
    */
-  public updateAll(where: any = undefined, data: any = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateAll(where: any = {}, data: any = {}): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/update";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -639,15 +639,15 @@ export class CategoryApi extends BaseLoopBackApi {
    * </em>
    */
   public deleteById(id: any): Observable<any> {
-    let method: string = "DELETE";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _method: string = "DELETE";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {};
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -664,15 +664,15 @@ export class CategoryApi extends BaseLoopBackApi {
    *
    *  - `count` – `{number}` - 
    */
-  public count(where: any = undefined): Observable<any> {
-    let method: string = "GET";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public count(where: any = {}): Observable<any> {
+    let _method: string = "GET";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/count";
-    let routeParams: any = {};
-    let postBody: any = {};
-    let urlParams: any = {};
-    if (where) urlParams.where = where;
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _routeParams: any = {};
+    let _postBody: any = {};
+    let _urlParams: any = {};
+    if (where) _urlParams.where = where;
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -694,18 +694,18 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public updateAttributes(id: any, data: any = undefined): Observable<any> {
-    let method: string = "PUT";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public updateAttributes(id: any, data: any = {}): Observable<any> {
+    let _method: string = "PUT";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -725,12 +725,12 @@ export class CategoryApi extends BaseLoopBackApi {
    *  - `changes` – `{ReadableStream}` - 
    */
   public createChangeStream(): Observable<any> {
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/change-stream";
     let subject = new Subject();
     if (typeof EventSource !== 'undefined') {
       let emit   = (msg: any) => subject.next(JSON.parse(msg.data));
-      var source = new EventSource(url);
+      var source = new EventSource(_url);
       source.addEventListener('data', emit);
       source.onerror = emit;
     } else {
@@ -756,18 +756,18 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public createManyRooms(id: any, data: Array<any> = undefined): Observable<any> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createManyRooms(id: any, data: Array<any> = []): Observable<any> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories/:id/rooms";
-    let routeParams: any = {
+    let _routeParams: any = {
       id: id
     };
-    let postBody: any = {
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result;
   }
 
@@ -787,16 +787,16 @@ export class CategoryApi extends BaseLoopBackApi {
    * This usually means the response is a `Category` object.)
    * </em>
    */
-  public createMany(data: Array<any> = undefined): Observable<Array<Category>> {
-    let method: string = "POST";
-    let url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+  public createMany(data: Array<any> = []): Observable<Array<Category>> {
+    let _method: string = "POST";
+    let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     "/Categories";
-    let routeParams: any = {};
-    let postBody: any = {
+    let _routeParams: any = {};
+    let _postBody: any = {
       data: data
     };
-    let urlParams: any = {};
-    let result = this.request(method, url, routeParams, urlParams, postBody);
+    let _urlParams: any = {};
+    let result = this.request(_method, _url, _routeParams, _urlParams, _postBody);
     return result.map((instances: Array<Category>) =>
         instances.map((instance: Category) => new Category(instance))
     );
